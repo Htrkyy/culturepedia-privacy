@@ -3,209 +3,366 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Culturepedia — Privacy Policy</title>
+  <title>Culturepedia · Privacy Policy / Gizlilik Politikası</title>
+  <meta name="description" content="Privacy policy for the Culturepedia mobile application by Hüseyin Türk">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #0a0a0b;
-      --text: #e4e4e7;
-      --muted: #a1a1aa;
-      --link: #93c5fd;
-      --border: #27272a;
+      --bg: #EEF8FB;
+      --paper: #FFFFFF;
+      --border: #D5EAF2;
+      --ink: #14303F;
+      --muted: #587584;
+      --blue: #1F6FE0;
+      --green: #2EB872;
+      --sky: #4FA8F8;
     }
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #fafafa;
-        --text: #18181b;
-        --muted: #52525b;
-        --link: #1d4ed8;
-        --border: #e4e4e7;
+        --bg: #0D1C26;
+        --paper: #152A38;
+        --border: #23404F;
+        --ink: #E4F2F7;
+        --muted: #9DBBC8;
+        --blue: #7DB8FF;
+        --green: #6FE3A6;
+        --sky: #5CC4F5;
       }
     }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.55;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 1.5rem;
+      margin: 0;
       background: var(--bg);
-      color: var(--text);
+      color: var(--ink);
+      font: 16px/1.7 "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
     }
-    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.15rem; margin-top: 1.75rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
-    p, li { color: var(--text); }
-    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
-    a { color: var(--link); }
-    ul { padding-left: 1.25rem; }
-    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    .hero {
+      background: linear-gradient(135deg, #4F9DF7 0%, #5CD2E8 55%, #A4F3C4 100%);
+      color: #fff;
+      padding: 52px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .spark {
+      position: absolute; color: #fff; opacity: .85;
+      font-size: 22px; line-height: 1; user-select: none;
+    }
+    .hero .s1 { left: 12%; top: 26%; }
+    .hero .s2 { right: 14%; top: 58%; font-size: 18px; }
+    .hero .s3 { left: 22%; bottom: 20%; font-size: 12px; }
+    .hero .s4 { right: 24%; top: 18%; font-size: 12px; }
+    .logo {
+      width: 108px; height: 108px; margin: 0 auto 16px;
+      border-radius: 28px; overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, .85);
+      box-shadow: 0 14px 34px rgba(16, 80, 140, .28);
+    }
+    .logo img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .hero h1 {
+      margin: 0; font-size: 34px; font-weight: 900; letter-spacing: -.3px;
+      text-shadow: 0 2px 10px rgba(16, 80, 140, .25);
+    }
+    .hero p { margin: 4px 0 0; font-weight: 700; opacity: .95; text-shadow: 0 1px 6px rgba(16, 80, 140, .25); }
+    main { max-width: 820px; margin: -50px auto 48px; padding: 0 16px; position: relative; }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px 26px;
+      box-shadow: 0 14px 36px rgba(16, 80, 140, .10);
+    }
+    .toolbar { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+    .lang { display: inline-flex; background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+    .lang button {
+      border: 0; background: transparent; color: var(--muted);
+      font: 700 14px "Nunito", sans-serif;
+      padding: 6px 16px; border-radius: 999px; cursor: pointer;
+    }
+    .lang button.active { background: linear-gradient(135deg, #1F6FE0, #2EB872); color: #fff; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0 0 4px; }
+    h2 {
+      font-size: 19px; font-weight: 800; color: var(--blue); margin: 30px 0 8px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2::before {
+      content: ""; flex: none;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--sky), var(--green));
+      box-shadow: 0 0 0 4px rgba(79, 168, 248, .15);
+    }
+    p { margin: 0 0 10px; }
+    ul { margin: 0 0 12px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    li::marker { color: var(--green); }
+    a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; font-weight: 600; }
+    a:hover { border-bottom-color: currentColor; }
+    .intro { margin-top: 16px; }
+    .summary {
+      background: linear-gradient(135deg, rgba(79, 157, 247, .10), rgba(164, 243, 196, .16));
+      border: 1px solid var(--border);
+      border-radius: 18px; padding: 16px 18px; margin-top: 14px;
+    }
+    .summary h2 { margin-top: 0; }
+    .summary ul { margin: 0; }
+    footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 24px; }
+    [data-lang] { display: none; }
+    [data-lang].show { display: revert; }
+    @media (max-width: 520px) {
+      .card { padding: 22px 16px; }
+      .hero h1 { font-size: 28px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="meta">
-    Culturepedia mobile application<br>
-    Service Provider: Hüseyin Türk<br>
-    Contact: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a><br>
-    Effective date: 2026-09-22
-  </p>
+  <header class="hero">
+    <span class="spark s1">✦</span><span class="spark s2">✦</span>
+    <span class="spark s3">●</span><span class="spark s4">●</span>
+    <div class="logo"><img src="data:image/jpeg;base64,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" alt="Culturepedia logo"></div>
+    <h1>Culturepedia</h1>
+    <p><span data-lang="en">Privacy Policy</span><span data-lang="tr">Gizlilik Politikası</span></p>
+  </header>
 
-  <p>
-    This privacy policy applies to the <strong>Culturepedia</strong> app for mobile devices
-    (the “Application”), operated by Hüseyin Türk (the “Service Provider”).
-  </p>
+  <main>
+    <div class="card">
+      <div class="toolbar">
+        <div class="lang" role="tablist" aria-label="Language / Dil">
+          <button type="button" data-set="en">English</button>
+          <button type="button" data-set="tr">Türkçe</button>
+        </div>
+      </div>
 
-  <h2>Summary</h2>
-  <ul>
-    <li>Culturepedia does <strong>not</strong> require an account and does <strong>not</strong> operate its own backend server for storing your quiz progress.</li>
-    <li>Progress, hearts, saved knowledge cards, and settings are stored <strong>locally on your device</strong>.</li>
-    <li>The Application shows ads via <strong>Google AdMob</strong>, which may process device and advertising identifiers according to Google’s policies.</li>
-    <li>Questions about privacy: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>.</li>
-  </ul>
+      <!-- ============================ ENGLISH ============================ -->
+      <article data-lang="en" lang="en">
+        <p class="meta">Culturepedia mobile application</p>
+        <p class="meta">Service Provider: Hüseyin Türk</p>
+        <p class="meta">Contact: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a></p>
+        <p class="meta">Effective date: 2026-09-22</p>
 
-  <h2>Information Collection and Use</h2>
-  <p>When you download and use the Application, information may include:</p>
-  <ul>
-    <li>Device technical information such as Internet Protocol (IP) address and mobile operating system (typically processed by advertising / platform SDKs)</li>
-    <li>Advertising identifiers (for example Android Advertising ID), used for ad delivery, measurement, and fraud prevention</li>
-    <li>Local app data created by your use of the Application (quiz progress, hearts, saved cards, language/theme preferences) — stored on your device</li>
-  </ul>
-  <p>
-    The Service Provider does not ask you to create a user profile with name, email, or password inside the Application.
-    If you contact the Service Provider by email, the Service Provider will receive the information you include in that message.
-  </p>
+        <p class="intro">This privacy policy applies to the Culturepedia app for mobile devices (the “Application”), operated by Hüseyin Türk (the “Service Provider”).</p>
 
-  <h2>Advertising (AdMob)</h2>
-  <p>
-    The Application uses Google AdMob to display advertisements (for example banner, interstitial, and rewarded ads).
-    Google and its partners may collect and process data as described in Google’s policies, including for personalized or non-personalized ads where allowed by law and by your consent choices.
-  </p>
-  <p>Where required (for example in the EEA/UK), a consent / privacy options form may be shown before personalized ads are requested.</p>
-  <ul>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
-    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a></li>
-    <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob help (privacy / data)</a></li>
-  </ul>
+        <div class="summary">
+          <h2>Summary</h2>
+          <ul>
+            <li>Culturepedia does not require an account and does not operate its own backend server for storing your quiz progress.</li>
+            <li>Progress, hearts, saved knowledge cards, and settings are stored locally on your device.</li>
+            <li>The Application shows ads via Google AdMob, which may process device and advertising identifiers according to Google’s policies.</li>
+            <li>Questions about privacy: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>.</li>
+          </ul>
+        </div>
 
-  <h2>Cookies and similar technologies</h2>
-  <p>
-    The Application or its third-party SDKs may use cookies, SDKs, advertising identifiers, and similar technologies
-    to support functionality, advertising, measurement, or service delivery.
-    Where required by applicable law, consent will be obtained before using non-essential tracking technologies.
-  </p>
+        <h2>Information Collection and Use</h2>
+        <p>When you download and use the Application, information may include:</p>
+        <ul>
+          <li>Device technical information such as Internet Protocol (IP) address and mobile operating system (typically processed by advertising / platform SDKs)</li>
+          <li>Advertising identifiers (for example Android Advertising ID), used for ad delivery, measurement, and fraud prevention</li>
+          <li>Local app data created by your use of the Application (quiz progress, hearts, saved cards, language/theme preferences) — stored on your device</li>
+        </ul>
+        <p>The Service Provider does not ask you to create a user profile with name, email, or password inside the Application. If you contact the Service Provider by email, the Service Provider will receive the information you include in that message.</p>
 
-  <h2>Third-party services</h2>
-  <p>
-    The Application relies on third-party services that have their own privacy policies.
-    Please review them:
-  </p>
-  <ul>
-    <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
-    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">AdMob / Google advertising</a></li>
-  </ul>
-  <p>The Service Provider may disclose information:</p>
-  <ul>
-    <li>as required by law (for example to comply with a legal process);</li>
-    <li>when disclosure is believed in good faith to be necessary to protect rights, safety, investigate fraud, or respond to a government request;</li>
-    <li>with trusted service providers who process data on the Service Provider’s behalf under appropriate agreements (including Google for advertising).</li>
-  </ul>
+        <h2>Advertising (AdMob)</h2>
+        <p>The Application uses Google AdMob to display advertisements (for example banner, interstitial, and rewarded ads). Google and its partners may collect and process data as described in Google’s policies, including for personalized or non-personalized ads where allowed by law and by your consent choices.</p>
+        <p>Where required (for example in the EEA/UK), a consent / privacy options form may be shown before personalized ads are requested.</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+          <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob help (privacy / data)</a></li>
+        </ul>
 
-  <h2>International data transfers</h2>
-  <p>
-    Third-party providers such as Google may process data in countries other than your country of residence,
-    including outside the European Economic Area (EEA). Where required, appropriate safeguards
-    (for example Standard Contractual Clauses or other lawful mechanisms) may apply under those providers’ terms.
-  </p>
+        <h2>Cookies and similar technologies</h2>
+        <p>The Application or its third-party SDKs may use cookies, SDKs, advertising identifiers, and similar technologies to support functionality, advertising, measurement, or service delivery. Where required by applicable law, consent will be obtained before using non-essential tracking technologies.</p>
 
-  <h2>Your rights</h2>
-  <p>
-    Depending on where you live, you may have rights to request access to, correction of, or deletion of personal data,
-    to withdraw consent where processing is based on consent, and to lodge a complaint with a supervisory authority.
-  </p>
-  <p>
-    For local Application data on your device, you can clear progress using in-app reset options where available,
-    or uninstall the Application.
-  </p>
-  <p>
-    To exercise rights that relate to data held by the Service Provider (for example emails you sent),
-    contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>.
-  </p>
-  <p>
-    Requests relating to advertising identifiers or Google’s processing should also be reviewed through
-    your device advertising settings and Google’s privacy tools, because that processing is primarily controlled by Google.
-  </p>
+        <h2>Third-party services</h2>
+        <p>The Application relies on third-party services that have their own privacy policies. Please review them:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob / Google advertising</a></li>
+        </ul>
+        <p>The Service Provider may disclose information:</p>
+        <ul>
+          <li>as required by law (for example to comply with a legal process);</li>
+          <li>when disclosure is believed in good faith to be necessary to protect rights, safety, investigate fraud, or respond to a government request;</li>
+          <li>with trusted service providers who process data on the Service Provider’s behalf under appropriate agreements (including Google for advertising).</li>
+        </ul>
 
-  <h2>California privacy rights (CCPA/CPRA)</h2>
-  <p>
-    If you are a California resident, you may have the right to know what personal information is collected,
-    the right to delete personal information, the right to opt out of the sale or sharing of personal information,
-    and the right to non-discrimination for exercising these rights.
-    Contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> to make a request.
-  </p>
-  <p>
-    The Application uses advertising services that may involve “sharing” for cross-context behavioral advertising
-    under California law as implemented by Google’s ad stack. Use device / Google ad settings and in-app privacy options where available to control ads.
-  </p>
+        <h2>International data transfers</h2>
+        <p>Third-party providers such as Google may process data in countries other than your country of residence, including outside the European Economic Area (EEA). Where required, appropriate safeguards (for example Standard Contractual Clauses or other lawful mechanisms) may apply under those providers’ terms.</p>
 
-  <h2>Opt-out</h2>
-  <ul>
-    <li>Uninstall the Application to stop further local collection by the app.</li>
-    <li>Use your device settings to reset or limit advertising ID / personalized ads.</li>
-    <li>Where shown in the Application, open advertising privacy options (UMP) to manage consent.</li>
-    <li>Email <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> for other requests.</li>
-  </ul>
+        <h2>Your rights</h2>
+        <p>Depending on where you live, you may have rights to request access to, correction of, or deletion of personal data, to withdraw consent where processing is based on consent, and to lodge a complaint with a supervisory authority.</p>
+        <p>For local Application data on your device, you can clear progress using in-app reset options where available, or uninstall the Application.</p>
+        <p>To exercise rights that relate to data held by the Service Provider (for example emails you sent), contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>.</p>
+        <p>Requests relating to advertising identifiers or Google’s processing should also be reviewed through your device advertising settings and Google’s privacy tools, because that processing is primarily controlled by Google.</p>
 
-  <h2>Data retention</h2>
-  <ul>
-    <li><strong>Local app data</strong> (progress, hearts, saved cards, settings): remains on your device until you reset it in the app, clear app storage, or uninstall.</li>
-    <li><strong>Email correspondence</strong>: retained as needed to respond to you and for legitimate business / legal purposes, then deleted when no longer needed.</li>
-    <li><strong>Advertising / SDK data</strong>: retained by Google / partners according to their policies.</li>
-  </ul>
+        <h2>California privacy rights (CCPA/CPRA)</h2>
+        <p>If you are a California resident, you may have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. Contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> to make a request.</p>
+        <p>The Application uses advertising services that may involve “sharing” for cross-context behavioral advertising under California law as implemented by Google’s ad stack. Use device / Google ad settings and in-app privacy options where available to control ads.</p>
 
-  <h2>Children</h2>
-  <p>
-    The Application is not directed to children under 16 years of age (or such higher age as required by applicable law)
-    and is not intended as a child-directed service.
-    The Service Provider does not knowingly solicit personal data from children or market the Application to them.
-  </p>
-  <p>
-    If you believe a child has provided personal information to the Service Provider (for example by email),
-    contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> so appropriate steps can be taken.
-  </p>
+        <h2>Opt-out</h2>
+        <ul>
+          <li>Uninstall the Application to stop further local collection by the app.</li>
+          <li>Use your device settings to reset or limit advertising ID / personalized ads.</li>
+          <li>Where shown in the Application, open advertising privacy options (UMP) to manage consent.</li>
+          <li>Email <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> for other requests.</li>
+        </ul>
 
-  <h2>Security</h2>
-  <p>
-    The Service Provider takes reasonable steps to protect information under its control.
-    No method of transmission or storage is 100% secure. Advertising and platform SDKs apply their own security measures.
-  </p>
+        <h2>Data retention</h2>
+        <ul>
+          <li>Local app data (progress, hearts, saved cards, settings): remains on your device until you reset it in the app, clear app storage, or uninstall.</li>
+          <li>Email correspondence: retained as needed to respond to you and for legitimate business / legal purposes, then deleted when no longer needed.</li>
+          <li>Advertising / SDK data: retained by Google / partners according to their policies.</li>
+        </ul>
 
-  <h2>Data breach notification</h2>
-  <p>
-    If a data breach affecting personal data under the Service Provider’s control occurs,
-    notification will be provided as required by applicable law.
-  </p>
+        <h2>Children</h2>
+        <p>The Application is not directed to children under 16 years of age (or such higher age as required by applicable law) and is not intended as a child-directed service. The Service Provider does not knowingly solicit personal data from children or market the Application to them.</p>
+        <p>If you believe a child has provided personal information to the Service Provider (for example by email), contact <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> so appropriate steps can be taken.</p>
 
-  <h2>Changes</h2>
-  <p>
-    This Privacy Policy may be updated from time to time.
-    Material changes will be reflected by updating this page and the effective date.
-    Where required by law, additional notice or consent may be obtained.
-  </p>
+        <h2>Security</h2>
+        <p>The Service Provider takes reasonable steps to protect information under its control. No method of transmission or storage is 100% secure. Advertising and platform SDKs apply their own security measures.</p>
 
-  <h2>Your consent</h2>
-  <p>
-    Where processing is based on consent (for example certain advertising preferences),
-    you provide that consent by opting in through the relevant prompt or settings.
-    You may withdraw consent where applicable without affecting processing carried out before withdrawal.
-  </p>
+        <h2>Data breach notification</h2>
+        <p>If a data breach affecting personal data under the Service Provider’s control occurs, notification will be provided as required by applicable law.</p>
 
-  <h2>Contact</h2>
-  <p>
-    Questions about this Privacy Policy or privacy practices:
-    <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>
-  </p>
+        <h2>Changes</h2>
+        <p>This Privacy Policy may be updated from time to time. Material changes will be reflected by updating this page and the effective date. Where required by law, additional notice or consent may be obtained.</p>
 
-  <footer>
-    Culturepedia · Hüseyin Türk · Privacy Policy · Effective 2026-09-22
-  </footer>
+        <h2>Your consent</h2>
+        <p>Where processing is based on consent (for example certain advertising preferences), you provide that consent by opting in through the relevant prompt or settings. You may withdraw consent where applicable without affecting processing carried out before withdrawal.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this Privacy Policy or privacy practices: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a></p>
+      </article>
+
+      <!-- ============================ TÜRKÇE ============================ -->
+      <article data-lang="tr" lang="tr">
+        <p class="meta">Culturepedia mobil uygulaması</p>
+        <p class="meta">Hizmet Sağlayıcı: Hüseyin Türk</p>
+        <p class="meta">İletişim: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a></p>
+        <p class="meta">Yürürlük tarihi: 2026-09-22</p>
+
+        <p class="intro">Bu gizlilik politikası, Hüseyin Türk (“Hizmet Sağlayıcı”) tarafından işletilen, mobil cihazlar için Culturepedia uygulaması (“Uygulama”) için geçerlidir.</p>
+
+        <div class="summary">
+          <h2>Özet</h2>
+          <ul>
+            <li>Culturepedia hesap gerektirmez ve test ilerlemeni saklamak için kendine ait bir arka uç sunucusu işletmez.</li>
+            <li>İlerlemen, canların, kaydettiğin bilgi kartları ve ayarların cihazında yerel olarak saklanır.</li>
+            <li>Uygulama, Google AdMob aracılığıyla reklam gösterir; AdMob, cihaz ve reklam kimliklerini Google’ın politikalarına göre işleyebilir.</li>
+            <li>Gizlilikle ilgili sorular: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a>.</li>
+          </ul>
+        </div>
+
+        <h2>Bilgi Toplama ve Kullanım</h2>
+        <p>Uygulamayı indirip kullandığında işlenebilecek bilgiler şunlardır:</p>
+        <ul>
+          <li>İnternet Protokolü (IP) adresi ve mobil işletim sistemi gibi cihaz teknik bilgileri (genellikle reklam / platform SDK’ları tarafından işlenir)</li>
+          <li>Reklam gösterimi, ölçümü ve dolandırıcılığın önlenmesi için kullanılan reklam kimlikleri (örneğin Android Reklam Kimliği)</li>
+          <li>Uygulamayı kullanmanla oluşan yerel uygulama verileri (test ilerlemesi, canlar, kaydedilen kartlar, dil/tema tercihleri) — cihazında saklanır</li>
+        </ul>
+        <p>Hizmet Sağlayıcı, Uygulama içinde ad, e-posta veya şifre içeren bir kullanıcı profili oluşturmanı istemez. Hizmet Sağlayıcıyla e-posta yoluyla iletişime geçersen, Hizmet Sağlayıcı o mesajda yer alan bilgileri alır.</p>
+
+        <h2>Reklamlar (AdMob)</h2>
+        <p>Uygulama reklam göstermek için (örneğin banner, geçiş ve ödüllü reklamlar) Google AdMob’u kullanır. Google ve iş ortakları, yasaların ve onay tercihlerinin izin verdiği durumlarda kişiselleştirilmiş veya kişiselleştirilmemiş reklamlar dahil olmak üzere, verileri Google’ın politikalarında açıklandığı şekilde toplayıp işleyebilir.</p>
+        <p>Gerekli olduğu yerlerde (örneğin AEA/Birleşik Krallık), kişiselleştirilmiş reklamlar istenmeden önce bir onay / gizlilik seçenekleri formu gösterilebilir.</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a></li>
+          <li><a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google’ın, hizmetlerini kullanan site veya uygulamalardan gelen bilgileri nasıl kullandığı</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543?hl=tr" target="_blank" rel="noopener">AdMob yardım (gizlilik / veri)</a></li>
+        </ul>
+
+        <h2>Çerezler ve benzeri teknolojiler</h2>
+        <p>Uygulama veya üçüncü taraf SDK’ları; işlevselliği, reklamcılığı, ölçümü veya hizmet sunumunu desteklemek için çerezler, SDK’lar, reklam kimlikleri ve benzeri teknolojiler kullanabilir. Yürürlükteki yasaların gerektirdiği durumlarda, zorunlu olmayan izleme teknolojileri kullanılmadan önce onay alınır.</p>
+
+        <h2>Üçüncü taraf hizmetler</h2>
+        <p>Uygulama, kendi gizlilik politikaları olan üçüncü taraf hizmetlere dayanır. Lütfen bunları inceleyin:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Play Hizmetleri</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543?hl=tr" target="_blank" rel="noopener">AdMob / Google reklamcılığı</a></li>
+        </ul>
+        <p>Hizmet Sağlayıcı bilgileri şu durumlarda açıklayabilir:</p>
+        <ul>
+          <li>yasaların gerektirdiği durumlarda (örneğin yasal bir sürece uymak için);</li>
+          <li>hakları, güvenliği korumak, dolandırıcılığı araştırmak veya bir resmi makam talebine yanıt vermek için açıklamanın gerekli olduğuna iyi niyetle inanıldığında;</li>
+          <li>uygun sözleşmeler kapsamında Hizmet Sağlayıcı adına veri işleyen güvenilir hizmet sağlayıcılarla (reklamcılık için Google dahil).</li>
+        </ul>
+
+        <h2>Uluslararası veri aktarımları</h2>
+        <p>Google gibi üçüncü taraf sağlayıcılar verileri, Avrupa Ekonomik Alanı (AEA) dışı dahil, ikamet ettiğin ülke dışındaki ülkelerde işleyebilir. Gerekli olduğu yerlerde, bu sağlayıcıların koşulları kapsamında uygun güvenceler (örneğin Standart Sözleşme Maddeleri veya diğer yasal mekanizmalar) uygulanabilir.</p>
+
+        <h2>Hakların</h2>
+        <p>Nerede yaşadığına bağlı olarak; kişisel verilere erişim, bunların düzeltilmesini veya silinmesini talep etme, işlemenin rızaya dayandığı durumlarda rızanı geri çekme ve bir denetim makamına şikayette bulunma hakların olabilir.</p>
+        <p>Cihazındaki yerel Uygulama verileri için, mevcut olduğunda uygulama içi sıfırlama seçenekleriyle ilerlemeni temizleyebilir ya da Uygulamayı kaldırabilirsin.</p>
+        <p>Hizmet Sağlayıcının elindeki verilerle (örneğin gönderdiğin e-postalar) ilgili haklarını kullanmak için <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> adresine yaz.</p>
+        <p>Reklam kimlikleri veya Google’ın veri işlemesiyle ilgili talepler, bu işleme esas olarak Google tarafından kontrol edildiğinden, cihazının reklam ayarları ve Google’ın gizlilik araçları üzerinden de incelenmelidir.</p>
+
+        <h2>Kaliforniya gizlilik hakları (CCPA/CPRA)</h2>
+        <p>Kaliforniya sakiniysen; hangi kişisel bilgilerin toplandığını bilme, kişisel bilgilerin silinmesini isteme, kişisel bilgilerin satışını veya paylaşılmasını reddetme ve bu hakları kullandığın için ayrımcılığa uğramama hakların olabilir. Talepte bulunmak için <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> adresine yaz.</p>
+        <p>Uygulama, Google’ın reklam altyapısı tarafından uygulandığı şekliyle Kaliforniya yasası kapsamında bağlamlar arası davranışsal reklamcılık için “paylaşım” içerebilecek reklam hizmetleri kullanır. Reklamları kontrol etmek için cihaz / Google reklam ayarlarını ve mevcut olduğunda uygulama içi gizlilik seçeneklerini kullan.</p>
+
+        <h2>Vazgeçme</h2>
+        <ul>
+          <li>Uygulamanın daha fazla yerel veri toplamasını durdurmak için Uygulamayı kaldır.</li>
+          <li>Reklam kimliğini / kişiselleştirilmiş reklamları sıfırlamak veya sınırlamak için cihaz ayarlarını kullan.</li>
+          <li>Uygulamada gösterildiği yerlerde, onayını yönetmek için reklam gizlilik seçeneklerini (UMP) aç.</li>
+          <li>Diğer talepler için <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> adresine e-posta gönder.</li>
+        </ul>
+
+        <h2>Veri saklama</h2>
+        <ul>
+          <li>Yerel uygulama verileri (ilerleme, canlar, kaydedilen kartlar, ayarlar): Uygulamadan sıfırlayana, uygulama depolamasını temizleyene veya Uygulamayı kaldırana kadar cihazında kalır.</li>
+          <li>E-posta yazışmaları: Sana yanıt vermek ve meşru ticari / yasal amaçlar için gerektiği kadar saklanır, artık gerekmediğinde silinir.</li>
+          <li>Reklam / SDK verileri: Google / iş ortakları tarafından kendi politikalarına göre saklanır.</li>
+        </ul>
+
+        <h2>Çocuklar</h2>
+        <p>Uygulama 16 yaşın (veya yürürlükteki yasanın gerektirdiği daha yüksek yaşın) altındaki çocuklara yönelik değildir ve çocuklara yönelik bir hizmet olarak tasarlanmamıştır. Hizmet Sağlayıcı bilerek çocuklardan kişisel veri talep etmez veya Uygulamayı onlara pazarlamaz.</p>
+        <p>Bir çocuğun Hizmet Sağlayıcıya (örneğin e-posta yoluyla) kişisel bilgi verdiğini düşünüyorsan, gerekli adımların atılabilmesi için <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a> adresine yaz.</p>
+
+        <h2>Güvenlik</h2>
+        <p>Hizmet Sağlayıcı, kontrolündeki bilgileri korumak için makul adımlar atar. Hiçbir aktarım veya saklama yöntemi %100 güvenli değildir. Reklam ve platform SDK’ları kendi güvenlik önlemlerini uygular.</p>
+
+        <h2>Veri ihlali bildirimi</h2>
+        <p>Hizmet Sağlayıcının kontrolündeki kişisel verileri etkileyen bir veri ihlali meydana gelirse, yürürlükteki yasanın gerektirdiği şekilde bildirim yapılır.</p>
+
+        <h2>Değişiklikler</h2>
+        <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler bu sayfa ve yürürlük tarihi güncellenerek yansıtılır. Yasaların gerektirdiği durumlarda ek bildirim yapılabilir veya onay alınabilir.</p>
+
+        <h2>Onayın</h2>
+        <p>İşlemenin rızaya dayandığı durumlarda (örneğin bazı reklam tercihleri), ilgili istem veya ayarlar üzerinden kabul ederek bu onayı verirsin. Geçerli olduğu durumlarda, geri çekmeden önce gerçekleştirilen işlemeyi etkilemeden onayını geri çekebilirsin.</p>
+
+        <h2>İletişim</h2>
+        <p>Bu Gizlilik Politikası veya gizlilik uygulamaları hakkındaki sorular: <a href="mailto:unecticdes@gmail.com">unecticdes@gmail.com</a></p>
+      </article>
+    </div>
+
+    <footer>
+      <span data-lang="en">Culturepedia · Hüseyin Türk · Privacy Policy · Effective 2026-09-22</span>
+      <span data-lang="tr">Culturepedia · Hüseyin Türk · Gizlilik Politikası · Yürürlük 22.09.2026</span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var langs = ['en', 'tr'];
+      function set(lang) {
+        document.querySelectorAll('[data-lang]').forEach(function (el) {
+          el.classList.toggle('show', el.getAttribute('data-lang') === lang);
+        });
+        document.querySelectorAll('[data-set]').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-set') === lang);
+        });
+        document.documentElement.lang = lang;
+      }
+      document.querySelectorAll('[data-set]').forEach(function (b) {
+        b.addEventListener('click', function () { set(b.getAttribute('data-set')); });
+      });
+      var q = new URLSearchParams(location.search).get('lang');
+      var nav = (navigator.language || 'en').slice(0, 2);
+      set(langs.indexOf(q) >= 0 ? q : (nav === 'tr' ? 'tr' : 'en'));
+    })();
+  </script>
 </body>
 </html>
